@@ -1,6 +1,6 @@
 import React from 'react';
 import { PROJECTS } from '../constants';
-import { ExternalLink, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import {  ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {

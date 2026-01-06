@@ -1,6 +1,6 @@
 import React from 'react';
 import { EDUCATION } from '../constants';
-import { BookOpen } from 'lucide-react';
+
 
 const Education: React.FC = () => {
   return (
