@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24 dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhanusha - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              background: 'rgb(var(--background) / <alpha-value>)',
+              surface: 'rgb(var(--surface) / <alpha-value>)',
+              surfaceHighlight: 'rgb(var(--surface-highlight) / <alpha-value>)',
+              text: 'rgb(var(--text) / <alpha-value>)',
+              textMuted: 'rgb(var(--text-muted) / <alpha-value>)',
+              primary: '#6366f1', // Indigo
+              secondary: '#8b5cf6', // Violet
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --background: 249 250 251;
+        --surface: 243 244 246;
+        --surface-highlight: 229 231 235;
+        --text: 17 24 39;
+        --text-muted: 75 85 99;
+      }
+
+      .dark {
+        --background: 5 5 5; /* #050505 as before */
+        --surface: 12 12 12;
+        --surface-highlight: 20 20 20;
+        --text: 237 237 237;
+        --text-muted: 161 161 170;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgb(var(--background)); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+      
+      body {
+        background-color: rgb(var(--background));
+        color: rgb(var(--text));
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      /* Glass utilities */
+      .glass {
+        background: rgba(var(--text), 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(var(--text), 0.1);
+      }
+      
+      .glass-hover:hover {
+        background: rgba(var(--text), 0.08);
+        border-color: rgba(var(--text), 0.15);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.24.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
